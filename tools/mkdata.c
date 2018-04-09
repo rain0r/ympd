@@ -41,11 +41,13 @@ static const char* get_mime(char* filename)
     if(!strcmp(extension, ".ico"))
         return "image/vnd.microsoft.icon";
     if(!strcmp(extension, ".woff"))
-        return "application/font-woff";
+        return "font/woff";
+    if(!strcmp(extension, ".woff2"))
+        return "font/woff2";
     if(!strcmp(extension, ".ttf"))
-        return "application/x-font-ttf";
+        return "font/ttf";
     if(!strcmp(extension, ".eot"))
-        return "application/octet-stream";
+        return "application/vnd.ms-fontobject";
     if(!strcmp(extension, ".svg"))
         return "image/svg+xml";
     if(!strcmp(extension, ".html"))
@@ -90,5 +92,6 @@ int main(int argc, char *argv[])
     }
 
     fputs(footer, stdout);
+
     return EXIT_SUCCESS;
 }

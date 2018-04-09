@@ -1,24 +1,21 @@
-[![Build Status](https://travis-ci.org/notandy/ympd.svg)](https://travis-ci.org/notandy/ympd)
 ympd
 ====
 
+This is a fork of [ympd](http://github.com/notandy/ympd) with Bootstrap 4 and some more minor changes.
+
 Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 
-
-http://www.ympd.org
-
-![ScreenShot](http://www.ympd.org/assets/ympd_github.png)
+![ScreenShot](https://up.hihn.org/media/up/media/images/2018-03-04-09-27-32.png)
 
 Dependencies
 ------------
  - libmpdclient 2: http://www.musicpd.org/libs/libmpdclient/
  - cmake 2.6: http://cmake.org/
- - OpenSSL: https://www.openssl.org/
 
 Unix Build Instructions
 -----------------------
 
-1. install dependencies. cmake, libmpdclient (dev), and OpenSSL (dev) are available from all major distributions.
+1. install dependencies, cmake and libmpdclient are available from all major distributions.
 2. create build directory ```cd /path/to/src; mkdir build; cd build```
 3. create makefile ```cmake ..  -DCMAKE_INSTALL_PREFIX:PATH=/usr```
 4. build ```make```

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-project (ympd C)
+project (ympd)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
 set(CPACK_PACKAGE_VERSION_MAJOR "1")
 set(CPACK_PACKAGE_VERSION_MINOR "2")
@@ -24,8 +24,8 @@ include_directories(${PROJECT_BINARY_DIR} ${PROJECT_SOURCE_DIR}	${LIBMPDCLIENT_I
 
 include(CheckCSourceCompiles)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99 -Wall")
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -ggdb -pedantic")
+set(CMAKE_C_FLAGS "-std=gnu99 -Wall")
+set(CMAKE_C_FLAGS_DEBUG "-ggdb -pedantic")
 if(WITH_IPV6)
     set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS NS_ENABLE_IPV6)
 endif()
@@ -41,7 +41,7 @@ file(GLOB RESOURCES
     htdocs/js/*
     htdocs/assets/*
     htdocs/css/*.css
-    htdocs/fonts/*
+    htdocs/webfonts/*
     htdocs/index.html
 )
 
