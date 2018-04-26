@@ -79,7 +79,7 @@ export class MpdListener {
     });
 
     $('#search').submit(() => {
-      window.location.href = '#/search/' + $('#search > div > input').val();
+      window.location.href = '#/search/' + $('#search > div > input').val().trim();
       return false;
     });
 
