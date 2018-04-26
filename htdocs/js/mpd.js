@@ -11,7 +11,7 @@ export class Mpd {
     this.pagination = 0;
     this.browsepath = '';
     this.currentSong = {};
-    this.MAX_ELEMENTS_PER_PAGE = 128;
+    this.MAX_ELEMENTS_PER_PAGE = 1024;
     this.isTouch = 'ontouchstart' in document.documentElement;
     this._mpdCallback = null;
 
